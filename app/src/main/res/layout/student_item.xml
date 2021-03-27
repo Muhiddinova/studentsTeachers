@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="student"
+            type="com.example.studentsteachers.model.StudentTeacher" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="4dp">
+
+        <TextView
+            android:id="@+id/teacher_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{student.studentName}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="User-1" />
+
+        <TextView
+            android:id="@+id/teacher_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{"age: " + student.studentAge}'
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="age: 24" />
+
+        <TextView
+            android:id="@+id/tv_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text='@{"course: " + student.course}'
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/teacher_name"
+            tools:text="+998992322222" />
+
+        <TextView
+            android:id="@+id/tv_faculty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text='@{"faculty: " + student.faculty}'
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_phone"
+            tools:text="kmwfmalvmilaewf@gmail.com" />
+        <TextView
+            android:id="@+id/tv_techId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text='@{"teacher: " + student.teacherName}'
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_faculty"
+            tools:text="1" />
+        <TextView
+            android:id="@+id/tv_techSubject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text='@{"Subject: " + student.subject}'
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_techId"
+            tools:text="1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

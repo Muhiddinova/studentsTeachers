@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">studentsTeachers</string>
+    <string name="title_student">Student</string>
+    <string name="title_teacher">Teacher</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_sample">MainActivity</string>
+
+</resources>
